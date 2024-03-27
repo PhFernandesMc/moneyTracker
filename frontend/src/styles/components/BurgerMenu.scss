@@ -1,0 +1,78 @@
+@import "../base/variables.scss";
+.menu {
+  background-color: #edefeb;
+  border-radius: 100px;
+  z-index: 1000;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.menuBars {
+  z-index: 100;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  transition: all 1.5s;
+}
+
+.closeBar1 {
+  background-color: white;
+  translate: 0px 10px;
+  transform: rotate(45deg);
+}
+.closeBar2 {
+  background-color: white;
+  translate: 0px 2px;
+  transform: rotate(-45deg);
+}
+
+.menuList {
+  width: 100vw;
+  height: 0vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.934);
+  top: 0;
+  right: 0;
+  transition: all 1.2s;
+  display: flex;
+}
+
+ul {
+  display: none;
+  list-style: none;
+}
+
+.menuItems {
+  font-family: $primaryFontFamily;
+  color: white;
+  font-size: 25px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  transition: all 1s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+  }
+}
+
+.open {
+  height: 100vh;
+  padding: 100px 40px;
+  ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

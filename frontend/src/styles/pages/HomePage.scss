@@ -1,0 +1,33 @@
+@import "../base/variables.scss";
+
+.homePageSection {
+  height: 82vh;
+  width: 100vw;
+  padding: 50px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+
+.title {
+  font-family: $secondaryFontFamily;
+  font-size: 37px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.caption {
+  font-family: $primaryFontFamily;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  max-width: 240px;
+}
+
+.buttonContainer {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

@@ -4,9 +4,11 @@ import ErrorPage from "./error-page";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LoginContextProvider } from "./context/Login";
 import HomePage from "./pages/HomePage";
-import "./index.css";
+import "./styles/index.scss";
 import Layout from "./layout/Layout";
 import DashBoard from "./pages/DashBoard";
+import LoginPage from "./pages/LoginPage";
+import RegistrationPage from "./pages/RegistrationPage";
 
 const router = createBrowserRouter([
   {
@@ -19,9 +21,17 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
+        path: "LoginPage",
+        element: <LoginPage />,
+      },
+      {
+        path: "RegistrationPage",
+        element: <RegistrationPage />,
+      },
+      {
         path: "DashBoard",
-        element: <DashBoard/>
-      }
+        element: <DashBoard />,
+      },
     ],
   },
 ]);

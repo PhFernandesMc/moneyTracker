@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import { useLoginContext } from "../context/Login";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { userType } from "../types";
+import { useEffect } from "react";
 
 export default function Layout() {
   const { user, login } = useLoginContext();
@@ -25,18 +26,16 @@ export default function Layout() {
   }
 
   useEffect(() => {
-    if (user.userName === "") {
-      // Redirect only if the current URL is not already "/HomePage"
-      if (window.location.pathname !== "/HomePage") {
-        window.location.replace("/HomePage");
-      }
-    } else {
-      // Redirect only if the current URL is not already "/"
+    if (user.userName !== "") {
       if (window.location.pathname !== "/DashBoard") {
         window.location.replace("/DashBoard");
       }
+    } else {
+      if (window.location.pathname === "/DashBoard") {
+        window.location.replace("/HomePage");
+      }
     }
-  }, [user]);
+  }, [user])
 
   return (
     <>
